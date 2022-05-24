@@ -3,16 +3,25 @@ import logo from "../../../images/logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
   const menuItems = (
     <>
-      <li><Link to='/'>Home</Link></li>
-      <li><Link to='/about'>About</Link></li>
-      <li><Link to='/services'>Services</Link></li>
-      <li><Link to='/blogs'>Blogs</Link></li>
-      <li><Link to='/contact'>Contact</Link></li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/services">Services</Link>
+      </li>
+      <li>
+        <Link to="/blogs">Blogs</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
     </>
-  )
+  );
 
   return (
     <div class="navbar bg-base-100 border-b">
@@ -46,13 +55,30 @@ const Navbar = () => {
         </Link>
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal p-0 text-xl">
-          {menuItems}
-        </ul>
+        <ul class="menu menu-horizontal p-0 text-xl">{menuItems}</ul>
       </div>
       <div class="navbar-end">
         {/* sign out button and user pic here */}
-        <Link to="/"><small>signOut-userPic</small></Link>
+        <Link to="/">
+          <small>signOut-userPic</small>
+        </Link>
+        {/* search icon */}
+        <button class="btn btn-ghost btn-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
