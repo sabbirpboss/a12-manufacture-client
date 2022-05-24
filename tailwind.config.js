@@ -7,9 +7,9 @@ module.exports = {
     themes: [
       {
         industotheme: {
-          primary: "red",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
+          primary: "#FA4318",
+          secondary: "#0A0603",
+          accent: "#EFEFEF",
           neutral: "#3d4451",
           "base-100": "#ffffff",
         },
