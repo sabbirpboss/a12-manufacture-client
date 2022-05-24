@@ -1,7 +1,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "img": "url('https://i.ibb.co/bNv4Qcv/1.png')",
+        "img-2": "url('https://i.ibb.co/hgMbQ8T/2.png')",
+        "img-3": "url('https://i.ibb.co/FgXRcKG/3.png')",
+        "img-4": "url('https://i.ibb.co/3zcS4Qk/4.png')",
+      },
+    },
   },
   daisyui: {
     themes: [

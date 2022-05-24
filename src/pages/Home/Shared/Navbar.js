@@ -58,10 +58,6 @@ const Navbar = () => {
         <ul class="menu menu-horizontal p-0 text-xl">{menuItems}</ul>
       </div>
       <div class="navbar-end">
-        {/* sign out button and user pic here */}
-        <Link to="/">
-          <small>signOut-userPic</small>
-        </Link>
         {/* search icon */}
         <button class="btn btn-ghost btn-circle">
           <svg
@@ -79,6 +75,10 @@ const Navbar = () => {
             />
           </svg>
         </button>
+        {/* sign out button and user pic here */}
+        <Link to="/">
+          <small>signOut-userPic</small>
+        </Link>
       </div>
     </div>
   );
