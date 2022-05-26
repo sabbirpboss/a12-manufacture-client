@@ -5,7 +5,7 @@ const useServices = () => {
     const [spinner, setSpinner] = useState(false)
 
     useEffect(() => {
-        fetch("https://calm-dusk-84501.herokuapp.com/AllHandpatrai")
+        fetch("Parts.json")
             .then((res) => res.json())
             .then((data) => {
                 setServices(data)
