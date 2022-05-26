@@ -19,7 +19,7 @@ const Products = () => {
     return (
         <>
             <Helmet>
-                <title>Products - Digitaz LTD.</title>
+                <title>Products - Industo LTD.</title>
             </Helmet>
             <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-primary'>All Your Needs</span></h3>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 pl-6'>

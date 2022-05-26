@@ -2,16 +2,16 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Banner from './Banner';
 import BSummery from './BSummery';
+import Contact from './Contact';
 import News from './News';
 import Products from './Products';
 import Review from './Review';
-import Contact from './Contact';
 
 const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Home - Digitaz LTD.</title>
+                <title>Home - Industo LTD.</title>
             </Helmet>
             <Banner />
             <Products />

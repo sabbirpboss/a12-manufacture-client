@@ -11,7 +11,7 @@ const Dashboard = () => {
     return (
         <section>
             <Helmet>
-                <title>Dashboard - Digitaz LTD.</title>
+                <title>Dashboard - Industo LTD.</title>
             </Helmet>
             <div className="drawer drawer-mobile">
                 <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
