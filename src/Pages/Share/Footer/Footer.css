@@ -1,0 +1,32 @@
+.footerSection {
+  height: 100%;
+  width: 100%;
+  background: tomato;
+  border-top: 1px solid rgba(245, 119, 96, 0.861);
+  color: #333;
+}
+
+.linkIcon {
+  font-size: 40px;
+  margin: 0px;
+  color: #303030;
+  border-radius: 50%;
+  /* transition: 1s; */
+}
+
+.linkIcon:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.link {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: rgb(0, 0, 0);
+}

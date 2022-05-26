@@ -1,0 +1,13 @@
+.review-card {
+    transition: 0.9s;
+    cursor:pointer;
+    border-radius: 15px;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+.reviews{
+    overflow-wrap: break-word;
+}
