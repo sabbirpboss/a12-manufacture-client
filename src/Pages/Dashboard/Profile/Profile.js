@@ -13,7 +13,7 @@ const Profile = () => {
     const [user] = useAuthState(auth);
     const [modalClose, setModalClose] = useState('');
 
-    const { data: profile, isLoading, error, refetch } = useQuery('porfile', () => fetch(`https://powerful-fjord-17237.herokuapp.com/user/${user?.email}`).then(res => res.json()))
+    const { data: profile, isLoading, error, refetch } = useQuery('porfile', () => fetch(`http://localhost:5000/user/${user?.email}`).then(res => res.json()))
 
     if (isLoading) {
         return <Loading />
@@ -24,7 +24,7 @@ const Profile = () => {
 
     return (
         <>
-            <h3 className='text-2xl text-center font-bold my-4'><span className=' border-b-2 border-primary'>Profile</span></h3>
+            <h3 className='text-2xl text-center font-bold my-4'><span className=' border-b-2 border-accent'>Profile</span></h3>
             <div className='flex justify-center items-center my-10'>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
@@ -49,7 +49,7 @@ const Profile = () => {
                         for="edit-modal"
                         disabled={!profile}
                         onClick={() => setModalClose('open')}
-                        className="btn btn-xs btn-primary"
+                        className="btn btn-xs btn-accent"
                     ><BiEdit className='text-lg mr-2' /> Update Profile</label>
                 </div>
                 {

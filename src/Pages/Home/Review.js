@@ -10,7 +10,7 @@ import "./sweperstyle.css";
 
 const Review = () => {
 
-    const { data: reviews, isLoading, error } = useQuery('reviews', () => fetch('https://powerful-fjord-17237.herokuapp.com/reviews').then(res => res.json()))
+    const { data: reviews, isLoading, error } = useQuery('reviews', () => fetch('http://localhost:5000/reviews').then(res => res.json()))
 
     if (isLoading) {
         return <Loading />
@@ -20,15 +20,15 @@ const Review = () => {
     }
 
     return (
-        <div className='mt-24 pb-36 bg-white'>
-            <h3 className='text-2xl text-center font-bold my-4'><span className=' border-b-2 border-primary'>Customar Reviews</span></h3>
+        <div className='mt-24 pb-36 bg-white container mx-auto'>
+            <h3 className='text-2xl text-center font-bold my-12'><span className=' border-b-2 border-accent'>Customer Reviews</span></h3>
             <Swiper pagination={true} modules={[Pagination]} className="mySwiper w-2/4">
                 {
                     reviews?.slice(0, 20)?.reverse()?.map(({ _id, name, img, description, review }) => (
                         <SwiperSlide key={_id}>
-                            <div className="card w-96 bg-gray-300 shadow-xl">
+                            <div className="card w-96 bg-gradient-to-r from-accent to-[#2b0a37] text-white">
                                 <figure className="px-10 pt-10">
-                                    <img src={img} alt="Shoes" className="rounded-xl" />
+                                    <img src={img} alt="customer" className="rounded-xl" />
                                 </figure>
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">{name}</h2>

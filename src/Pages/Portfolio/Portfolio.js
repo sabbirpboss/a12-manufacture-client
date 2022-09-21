@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <>
       <h3 className="text-2xl text-center font-bold my-8">
-        <span className=" border-b-2 border-primary">Developer Portfolio</span>
+        <span className=" border-b-2 border-accent">Developer Portfolio</span>
       </h3>
 
       <div>
@@ -35,7 +35,7 @@ const Portfolio = () => {
             </Link>
           </div>
           <div className="flex justify-center items-center mb-10">
-            <div className="card w-full md:w-2/4 lg:w-2/5 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-primary-content">
+            <div className="card w-full md:w-2/4 lg:w-2/5 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-accent-content">
               <div className="card-body">
                 <h2 className="card-title">Skills</h2>
                 <div className="flex">
@@ -74,7 +74,7 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="flex justify-center items-center mb-10">
-            <div className="card w-full md:w-2/4 lg:w-2/5 bg-gradient-to-r from-purple-500 to-pink-500 text-primary-content">
+            <div className="card w-full md:w-2/4 lg:w-2/5 bg-gradient-to-r from-purple-500 to-pink-500 text-accent-content">
               <div className="card-body">
                 <h2 className="card-title">Projects</h2>
                 <div className="grid grid-cols-1">

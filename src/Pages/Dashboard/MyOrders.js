@@ -14,7 +14,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://powerful-fjord-17237.herokuapp.com/orders?email=${user.email}`, {
+            fetch(`http://localhost:5000/orders?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-primary'>My Orders</span></h3>
+            <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-accent'>My Orders</span></h3>
             <div className="overflow-x-auto mx-6">
                 <table className="table w-full">
                     <thead>
@@ -58,13 +58,13 @@ const MyOrders = () => {
                                 <td>{quantity}</td>
                                 <td>{price}</td>
                                 <td>
-                                    {(price && !paid) && <Link to={`/dashboard/payment/${_id}`}><button className='btn btn-xs btn-primary'>pay</button></Link>}
+                                    {(price && !paid) && <Link to={`/dashboard/payment/${_id}`}><button className='btn btn-xs btn-accent'>pay</button></Link>}
                                     {(price && paid) && <div>
                                         {
                                             deleverd ? <div>
                                                 <p><span className='text-success'>Paid</span></p>
                                                 <p>Transaction id: <span className='text-success'>{transactionId}</span></p>
-                                            </div> : <p><span className='text-primary'>Pending...</span></p>
+                                            </div> : <p><span className='text-accent'>Pending...</span></p>
                                         }
                                     </div>}
                                 </td>

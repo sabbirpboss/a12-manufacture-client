@@ -1,6 +1,5 @@
 import { HelmetProvider } from 'react-helmet-async';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './Pages/Shared/NavBar';
 import NotFound from './Pages/Shared/NotFound';
 import { themeChange } from 'theme-change'
 import { useEffect } from 'react';
@@ -17,8 +16,9 @@ import ManageOrders from './Pages/Dashboard/ManageOrders';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
-import Purcess from './Pages/Purcess/Purcess';
+import Purchase from './Pages/Purchase/Purchase';
 import Payment from './Pages/Dashboard/Payment';
+import NavBar from './Pages/Shared/NavBar';
 
 function App() {
 
@@ -27,8 +27,10 @@ function App() {
   }, [])
 
   return (
-    <HelmetProvider>
-      <NavBar >
+    <div className="App">
+      <HelmetProvider>
+        <NavBar>
+
         <Routes>
           {
             PublicRoute.map(({ path, Component }, index) => (
@@ -36,9 +38,9 @@ function App() {
             ))
           }
 
-          <Route path='/purcess/:id' element={
+          <Route path='/purchase/:id' element={
             <RequerAuth>
-              <Purcess />
+              <Purchase />
             </RequerAuth>} />
 
           <Route path='/dashboard' element={
@@ -60,8 +62,9 @@ function App() {
         </Routes>
         <Footer />
         <ToastContainer />
-      </NavBar>
+        </NavBar>
     </HelmetProvider>
+    </div>
   );
 }
 

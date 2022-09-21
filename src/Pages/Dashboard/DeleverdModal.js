@@ -5,7 +5,7 @@ const DeleverdModal = ({ setModalClose, _id, productName }) => {
 
     const handleDeleverd = () => {
 
-        fetch(`https://powerful-fjord-17237.herokuapp.com/paidorders/${_id}`, {
+        fetch(`http://localhost:5000/paidorders/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

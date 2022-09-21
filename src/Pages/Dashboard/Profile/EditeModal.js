@@ -14,7 +14,7 @@ const OrderModal = ({ profile, refetch, setModalClose }) => {
         const linkedin = e.target.linkedin.value;
         const profile = { education, location, phone, linkedin }
 
-        fetch(`https://powerful-fjord-17237.herokuapp.com/user/${email}`, {
+        fetch(`http://localhost:5000/user/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -38,7 +38,7 @@ const OrderModal = ({ profile, refetch, setModalClose }) => {
                 <div className="modal-box">
                     <label htmlFor="edit-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
-                    <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-primary'>Profile Update</span></h3>
+                    <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-accent'>Profile Update</span></h3>
 
                     <form
                         onSubmit={handleUpdate}
@@ -50,7 +50,7 @@ const OrderModal = ({ profile, refetch, setModalClose }) => {
                         <input required type="text" name="location" placeholder="Location" className="input input-bordered w-full max-w-xs" />
                         <input required type="number" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         <input required type="text" name="linkedin" placeholder="Linkedin" className="input input-bordered w-full max-w-xs" />
-                        <input type="submit" value="Update" className="btn btn-primary w-full max-w-xs" />
+                        <input type="submit" value="Update" className="btn btn-accent w-full max-w-xs" />
                     </form>
 
                 </div>

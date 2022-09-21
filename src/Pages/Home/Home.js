@@ -6,20 +6,25 @@ import Contact from './Contact';
 import News from './News';
 import Products from './Products';
 import Review from './Review';
+import Services from './Services/Services';
+import Showcase from './Showcase/Showcase';
 
 const Home = () => {
     return (
-        <>
+        <div>
             <Helmet>
-                <title>Home - Industo LTD.</title>
+                <title>Home - FriendsMoto LTD</title>
             </Helmet>
+            
             <Banner />
+            <Services />
+            <Showcase />
             <Products />
             <BSummery />
             <News />
             <Review />
             <Contact />
-        </>
+        </div>
     );
 };
 

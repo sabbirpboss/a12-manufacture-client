@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <>
       <h3 className="text-2xl text-center font-bold my-8">
-        <span className=" border-b-2 pb-2 border-primary">Blogs</span>
+        <span className=" border-b-2 pb-2 border-accent">Blogs</span>
       </h3>
 
       <div className="flex flex-col justify-center items-center gap-5 mb-10">

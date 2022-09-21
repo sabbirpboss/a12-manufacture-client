@@ -5,7 +5,7 @@ const OrderModal = ({ setModalClose, _id, productName }) => {
 
     const handleDelete = () => {
 
-        fetch(`https://powerful-fjord-17237.herokuapp.com/orders/${_id}`, {
+        fetch(`http://localhost:5000/orders/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

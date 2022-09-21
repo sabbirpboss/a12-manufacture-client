@@ -5,7 +5,7 @@ const DeleverdModal = ({ setModalClose, _id, name, refetch }) => {
 
     const handleAdmin = () => {
         const role = { role: 'admin' }
-        fetch(`https://powerful-fjord-17237.herokuapp.com/users/${_id}`, {
+        fetch(`http://localhost:5000/users/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

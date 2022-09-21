@@ -1,31 +1,35 @@
 import React from "react";
+import { FaAngleRight } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className='bg-gray-300 px-10 py-14 '>
-      <div className='text-center pb-14 text-primary'>
-        <p className='text-xl font-bold'>
-          Contact Us
-        </p>
-        <h1 className='text-4xl'>Stay connected with us</h1>
+    <div className="py-1 text-white w-full">
+      <div className="text-center pb-14 text-[#2a303c]">
+        <span className="text-xl font-bold border-b-2 border-accent text-accent pb-1">Contact Us</span>
+        <h1 className="text-4xl mt-3">Stay connected with us 😀</h1>
       </div>
-      <div className='grid grid-cols-1 justify-items-center gap-5 bg-gradient-to-r from-violet-500 to-fuchsia-500 py-10'>
+      <div className="grid grid-cols-1 justify-items-center gap-5 bg-gradient-to-r from-[#2b0a37] to-accent py-10">
         <input
-          type='text'
-          placeholder='Email Address'
-          className='input w-full max-w-md'
+          type="email"
+          placeholder="Email Address"
+          className="input w-full max-w-md"
+          required
         />
         <input
-          type='text'
-          placeholder='Subject'
-          className='input w-full max-w-md'
+          type="text"
+          placeholder="Subject"
+          className="input w-full max-w-md"
+          required
         />
         <textarea
-          className='textarea w-full max-w-md'
-          placeholder='Your message'
-          rows={6}
-        ></textarea>
-        <button className="btn btn-primary">submit</button>
+          className="textarea w-full max-w-md"
+          placeholder="Your message"
+          rows={4}
+          required
+        />
+        <button className="btn btn-accent font-normal">
+          SEND US <FaAngleRight className="text-lg" />
+        </button>
       </div>
     </div>
   );

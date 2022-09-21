@@ -18,7 +18,7 @@ const ManageProducts = () => {
 
     return (
         <>
-            <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-primary'>Manage all orders</span></h3>
+            <h3 className='text-2xl text-center font-bold my-8'><span className=' border-b-2 border-accent'>Manage all orders</span></h3>
 
             <div className="overflow-x-auto mx-6">
                 <table className="table w-full">

@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, userName, email, price } = order;
 
     useEffect(() => {
-        fetch('https://powerful-fjord-17237.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://powerful-fjord-17237.herokuapp.com/orders/${_id}`, {
+            fetch(`http://localhost:5000/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -116,7 +116,7 @@ const CheckoutForm = ({ order }) => {
                     }}
                 />
                 {
-                    processing ? <Loading /> : <button type="submit" disabled={success} className='btn btn-primary btn-sm mt-4'>
+                    processing ? <Loading /> : <button type="submit" disabled={success} className='btn btn-accent btn-sm mt-4'>
                         Pay
                     </button>
                 }
